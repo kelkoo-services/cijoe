@@ -10,16 +10,16 @@
 
 . /lib/lsb/init-functions
 
-REPO=/path/to/your/git/repository
-PORT=4567
+REPO=***************
+PORT=80
 
 NAME=cijoe
-INSTALL_DIR=/usr/sbin
-DAEMON=$INSTALL_DIR/$NAME
-DAEMON_ARGS="-p $PORT $REPO"
+INSTALL_DIR=/home/********/cijoe/bin
+DAEMON=/usr/bin/authbind
+DAEMON_ARGS="--deep $INSTALL_DIR/$NAME -p $PORT $REPO"
 PIDFILE=/var/run/$NAME.pid
-DAEMON_USER=www-data
-DAEMON_GROUP=$DAEMON_USER
+DAEMON_USER=******
+DAEMON_GROUP=********
 
 # test -f $DAEMON || exit 0
 # test -f $PROJECT_DIR || exit 0
